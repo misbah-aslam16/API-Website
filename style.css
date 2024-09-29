@@ -1,8 +1,11 @@
-.home{
+body{
     background-image: url(./images/back.webp);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment:fixed !important ;
+}
+.home{
     height: 100vh;
     width: 100%;
     align-content: center !important;
@@ -11,9 +14,13 @@
 #searchInput{
     height: 50px;
 }
+#products{
+    background: transparent !important;
+}
 .btn {
     height: 50px; 
     width: 150px;
+    font-size: xx-large;
 }
 .card-text{
     color: rgb(68, 14, 112) !important;
@@ -21,26 +28,45 @@
     font-weight: bold !important;
 }
 .btn{
-    background-color: chocolate !important;
+    background-color: chocolate !important; 
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
 }
 .btn:hover{
+    color: #000 !important;
     transform:scale(1.1); 
-    
+    background: rgb(194, 141, 104) !important;
+    overflow: hidden !important;
 }
+
 .card{
     border: 5px solid chocolate !important;
     box-shadow: 3px 3px 3px 3px rgb(194, 141, 104);
+    overflow: hidden;
 }
-.card:hover{
+/* .card:hover{
     transform: translateY(10px);
     background-color: rgb(230, 206, 206);
     z-index: 8;
+} */
+.card img {
+    position: relative;
+    vertical-align: top;
+    max-width: 100%;
+    transition: 0.50 ease;
 }
-.rectangle {
-    background-color: transparent;
+.card img:hover{
+    transform: scale(1.2);
+}
+.circle {
+    background-image: url(./images/Round.jpg);
+    background-repeat: initial;
+    background-size: cover;
+    color: rgb(250, 126, 37);
     width: 400px;
-    height: 400px;
-    /* border-radius: 50%; */
+    height: 400px ;
     clip-path: circle(50% at 50% 50%);
     align-content: center;
     padding: 30px;
