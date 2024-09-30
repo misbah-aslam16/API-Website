@@ -16,6 +16,9 @@ body{
 }
 #products{
     background: transparent !important;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 }
 .btn {
     height: 50px; 
@@ -74,3 +77,14 @@ body{
     margin-right: auto;
 }
 
+@media screen and (max-width: 475px) {
+    .circle {
+        width: 350px;
+        height: 350px ;
+    }
+    #products{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    }
+  }
