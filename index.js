@@ -24,7 +24,7 @@ function renderRecipes(recipes) {
                     <img src="${recipes[i].image}" class="card-img-top" style="height: 300px;">
                     <div class="card-body text-center">
                         <h5 class="card-title mt-3" style="height: 40px;">${recipes[i].name}</h5>
-                        <p class="card-text text-center my-4" style="height: 20px;">${recipes[i].cuisine}</p>
+                        <p class="card-text text-center my-4" style="height: 30px;">${recipes[i].cuisine}</p>
                         <a href="#" class="btn btn-secondary" style="height: 40px;" onclick="showInDiv('${recipes[i].name}', '${recipes[i].ingredients.join(', ')}', '${recipes[i].instructions}', '${recipes[i].mealType}')">Get Recipe</a>
 
 

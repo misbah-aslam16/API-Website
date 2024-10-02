@@ -42,6 +42,8 @@ body{
     transform:scale(1.1); 
     background: rgb(194, 141, 104) !important;
     overflow: hidden !important;
+    animation: bounceOut; 
+    animation-duration: 2s;
 }
 
 .card{
@@ -49,11 +51,11 @@ body{
     box-shadow: 3px 3px 3px 3px rgb(194, 141, 104);
     overflow: hidden;
 }
-/* .card:hover{
+.card:hover{
     transform: translateY(10px);
     background-color: rgb(230, 206, 206);
     z-index: 8;
-} */
+}
 .card img {
     position: relative;
     vertical-align: top;
@@ -64,10 +66,9 @@ body{
     transform: scale(1.2);
 }
 .circle {
-    background-image: url(./images/Round.jpg);
+    background-image: url(./images/sec.webp);
     background-repeat: initial;
     background-size: cover;
-    color: rgb(250, 126, 37);
     width: 400px;
     height: 400px ;
     clip-path: circle(50% at 50% 50%);
@@ -76,15 +77,109 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+.para{
+color: #000;
+    font-weight: 900;
+}
 
-@media screen and (max-width: 475px) {
+/* For desktop */
+@media only screen and (min-width: 1200px) {
+    .home {
+        height: 100vh;
+        padding: 0;
+    }
+
+    #searchInput {
+        width: 50%;
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        width: 150px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .card {
+        width: 20rem;
+        margin: 1.5rem;
+    }
     .circle {
-        width: 350px;
-        height: 350px ;
+        width: 400px;
+        height: 400px;
+        font-size: 2.5rem; 
     }
-    #products{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
+
+}
+
+/* For tablets and medium-sized devices */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .home {
+        padding-top: 100px;
     }
-  }
+
+    #searchInput {
+        width: 70%;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 130px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .card {
+        width: 18rem;
+        margin: 1rem;
+    }
+
+    .circle {
+        width: 300px;
+        height: 300px;
+        font-size: 1.7rem; 
+    }
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+    .home {
+        height: auto;
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+
+    #searchInput {
+        width: 90%;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        width: 120px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+        font-size: 1rem; 
+    }
+
+    #recipeDetails {
+        width: 90%;
+        left: 5%;
+    }
+}
