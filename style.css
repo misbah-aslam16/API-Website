@@ -9,7 +9,6 @@ body{
     height: 100vh;
     width: 100%;
     align-content: center !important;
-    cursor: url('cursor.png'),auto !important;
 }
 #searchInput{
     height: 50px;
